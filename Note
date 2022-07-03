@@ -1,0 +1,16 @@
+Langkah Langkah Membuat CRUD
+1. Buka project baru 
+2. Akses halaman phpmyadmin dengan mengetikkan localhost/phpmyadmin di browser.
+3. Buat database di phpmyadmin dengan nama yang sudah ditentukan.
+4. Buka visual Studio Code dan kita buka file env lalu kita ganti di bagian database dengan nama yang sudah ditentukan.
+5. lalu kita buka terminal baru kita akan membuat tabel migrasi. Ketik php artisan make:migration create_mahasiswa_table.
+6. lalu kita bisa cek folder database, migrations. Kita bisa membuat berbaga kolom.
+7. Kemudian kita bisa menjalankan php artisan migrate.
+8. Kemudian kita bisa membuat model untuk mahasiswa supaya kita bisa menggunakannya untuk mengolah data. Kita bisa mengetikkan perintah php artisan make:model mahasiswa.
+9. Setelah itu kita bisa buka folder App, model dan buka file yang bernama mahasiswa.
+10. Buat Controller dengan menjalankan php make:controller mahasiswaController --resource.
+11. Kemudian buat folder didalam resource, view.
+12. Buat halaman pages layouts didalam folder layouts terdapat file main.blade.php.
+13. Buat folder baru dalam view dengan nama mahasiswa dan didalamnya terdapat file index.blade.php, tambah.blade.php, edit.blade.php.
+14. Route dan buka web.php kemudian ketik Route::resource('mahasiswa', MahasiswaController::class);
+15. Lalu kita jalankan server Laravel melewati terminal ketik php artisan serve kemudian copy link tersebut dan tambahkan /mahasiswa.
